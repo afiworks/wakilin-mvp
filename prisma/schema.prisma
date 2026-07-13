@@ -20,6 +20,8 @@ model Task {
   deadline  DateTime
   notes     String
   status String @default("OPEN")
+  report String?
+  rating Int?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

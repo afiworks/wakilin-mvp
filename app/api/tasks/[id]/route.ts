@@ -6,13 +6,17 @@ export async function PATCH(
 ) {
   const { id } = await params;
 
+  const body = await request.json();
+
   const task = await prisma.task.update({
     where: {
       id: Number(id),
     },
     data: {
-      status: "TAKEN",
-    },
+  ...(body.status && { status: body.status }),
+  ...(body.report && { report: body.report }),
+  ...(body.rating && { rating: body.rating }),
+},
   });
 
   return Response.json(task);
