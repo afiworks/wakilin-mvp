@@ -21,6 +21,13 @@ export default function Hero() {
         <button className="rounded-xl border border-gray-300 px-6 py-3 font-semibold transition hover:bg-gray-100">
           Jadi Scout
         </button>
+
+        <a
+  href="/task-list"
+  className="rounded-xl border border-gray-300 px-6 py-3 font-semibold transition hover:bg-gray-100"
+>
+  Lihat Task
+</a>
       </div>
     </>
   );
