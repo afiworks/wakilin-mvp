@@ -26,3 +26,13 @@ model Task {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+model ScoutProfile {
+  id        Int      @id @default(autoincrement())
+  name      String
+  city      String
+  bio       String?
+  photoUrl  String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
