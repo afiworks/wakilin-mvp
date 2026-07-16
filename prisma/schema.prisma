@@ -1,8 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
 generator client {
   provider = "prisma-client"
   output   = "../app/generated/prisma"
@@ -11,6 +6,7 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
 model Task {
   id        Int      @id @default(autoincrement())
   title     String
@@ -19,20 +15,19 @@ model Task {
   budget    Int
   deadline  DateTime
   notes     String
-  status String @default("OPEN")
-  report String?
-  rating Int?
-
+  status    String   @default("OPEN")
+  report    String?
+  rating    Int?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
 model ScoutProfile {
   id        Int      @id @default(autoincrement())
   name      String
   city      String
   bio       String?
   photoUrl  String?
-
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
