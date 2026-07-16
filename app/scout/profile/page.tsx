@@ -10,6 +10,7 @@ export default async function ScoutProfilePage() {
   },
 });
 const scout = await prisma.scoutProfile.findFirst();
+console.log("SCOUT DATA:", scout);
 const ratings = completedTasks
   .map((task) => task.rating)
   .filter((rating): rating is number => rating !== null);
@@ -48,6 +49,7 @@ const nextTarget =
         <h1 className="text-4xl font-bold">
           Profil Scout
         </h1>
+        
         <div className="mt-6 flex justify-center">
   <div className="flex h-32 w-32 items-center justify-center rounded-full bg-gray-200 text-4xl">
     👤

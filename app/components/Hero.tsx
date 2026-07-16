@@ -7,7 +7,7 @@ export default function Hero() {
       </h1>
 
       <p className="mt-4 max-w-2xl text-center text-lg text-gray-600">
-        Survei kos, cek rumah, inspeksi lokasi, dan berbagai tugas lapangan tanpa harus datang sendiri.
+        Survey kos, rumah, ruko, lokasi usaha, dan berbagai kebutuhan lapangan langsung dari Scout lokal terpercaya..
       </p>
 
       <div className="mt-6 flex gap-4">
